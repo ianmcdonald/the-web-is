@@ -63,12 +63,17 @@
       stroke: white;
     }
     footer {
+      display: block;
+      position: absolute;
+      top: 100vh;
+      left: 0;
+      width: 100%;
+      height: auto;
+      margin: 0;
+      padding: 0.25em;
       background: white;
       color: black;
       text-shadow: none;
-      margin-top: 100vh;
-      padding: 0.25em;
-      display: block;
       line-height: 1.2;
       text-align: justify;
       font-size: 1.5rem;
@@ -80,6 +85,9 @@
     footer span:first-child {
       color: black;
       text-decoration: underline;
+    }
+    footer em {
+      font-weight: lighter;
     }
   </style>
 </head>
@@ -265,7 +273,7 @@
     var footerText = '';
 
     for (var i = texts.length - 1; i >= 0; i--) {        
-      footerText += '<span>The Web is</span> ' +  (i + 1) + '&mdash;' + texts[i] + ' '
+      footerText += '<span>The Web is</span> ' + '<em>(' +  (i + 1) + ') </em>' + texts[i] + ' '
     }
     footer.innerHTML = footerText
   </script>
