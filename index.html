@@ -91,16 +91,12 @@
     }
   </style>
 </head>
-
 <body>
   <main>
     <h1>The Web is&nbsp;</h1><div class="something"></div>
-  <svg viewBox="0 0 300 225.9">
-      <path d="M146.7,4.8c77.4,0,140.1,43.7,140.1,97.5c0,25.4-13.9,48.5-36.7,65.8c1.2,6.2,3.4,12.6,7.1,18.8 c14.4,24,49.4,43.8,49.4,43.8s-53.6-27.9-92.9-42.7c-19.9,7.6-42.7,11.8-67,11.8c-77.4,0-140.1-43.7-140.1-97.5S69.3,4.8,146.7,4.8"/>
-  </svg>
+    <svg viewBox="0 0 300 225.9"><path d="M146.7,4.8c77.4,0,140.1,43.7,140.1,97.5c0,25.4-13.9,48.5-36.7,65.8c1.2,6.2,3.4,12.6,7.1,18.8 c14.4,24,49.4,43.8,49.4,43.8s-53.6-27.9-92.9-42.7c-19.9,7.6-42.7,11.8-67,11.8c-77.4,0-140.1-43.7-140.1-97.5S69.3,4.8,146.7,4.8"/></svg>
   </main>
-  <footer>
-  </footer>
+  <footer></footer>
   <script>
     (function() {
       var texts = [
@@ -272,7 +268,7 @@
         }
       })
       for (var i = texts.length - 1; i >= 0; i--) {
-        footerText += '<span>The Web is</span> ' + '<em>(' +  (i + 1) + ')&nbsp;</em>' + texts[i] + ' '
+        footerText += '<span>The Web is</span> ' + '<em>(' + (i + 1) + ')&nbsp;</em>' + texts[i] + ' '
       }
       footer.innerHTML = footerText
     })();
