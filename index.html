@@ -62,6 +62,7 @@
       height: auto;
       z-index: 1;
       min-height: 50vh;
+      box-shadow: 0px 0.25rem 0.5rem rgba(0,0,0,0.1);
     }
     p {
       margin: 0;
@@ -137,7 +138,7 @@
         one.textContent = document.title = oneText
         reload = setTimeout(function() {
           displayText(texts[Math.floor(Math.random() * texts.length)])
-        }, 100)
+        }, 250)
       }
       displayText(texts[Math.floor(Math.random() * texts.length)])
       for (var i = 0; i < texts.length; i++) {
