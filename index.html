@@ -3,7 +3,6 @@
   <meta charset="utf-8">
   <meta name="description" content="Statements found on the Web that seem to explain what it is">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="style.css" rel="stylesheet">
   <title>THE WEB IS&hellip;</title>
   <style>
     * {
@@ -102,43 +101,49 @@
     <div></div>
   </main>
   <script>
-    (function() {
-      var blocks
-      var texts = []
-      loadBlocks()
 
-      function loadBlocks() {
-        var xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function() {
-          if (this.readyState == 4 && this.status == 200) {
-            blocks = JSON.parse(this.responseText).contents
-            blocks.forEach(x => { texts.push(x.content) })
+    var texts = []    
+    var start = 1
+    var end = 10
+
+    function loadBlocks(page) {
+      var xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+          var blocks = JSON.parse(this.responseText).contents
+          blocks.forEach(x => { texts.push(x.content) })
+          if (start < end) {
+            start++
+            loadBlocks(start)
+          } else {
             writeIt()
           }
-        };
-        xhttp.open("GET", "http://api.are.na/v2/channels/the-web-is?per=1000", true);
-        xhttp.send();
-      }
-      
-      function writeIt() {
-        var one = document.querySelector('h1')
-        var all = document.querySelector('div')
-        var reload
-        var oneText = ''
-        var allText = ''
-        function displayText(text) {
-          oneText = text.toUpperCase()
-          one.textContent = document.title = oneText
-          reload = setTimeout(function() {
-            displayText(texts[Math.floor(Math.random() * texts.length)])
-          }, 100)
         }
-        displayText(texts[Math.floor(Math.random() * texts.length)])
-        for (var i = texts.length - 1; i >= 0; i--) {
-          allText += texts[i].toUpperCase() + ' <span class="spacer"></span> '
-        }
-        all.innerHTML = '<p>' + allText + '</p>'
+      };
+      xhttp.open("GET", 'http://api.are.na/v2/channels/the-web-is?per=100&amp;page=' + page, true);
+      xhttp.send();
+    }
+
+    loadBlocks(start)
+    
+    function writeIt() {
+      var one = document.querySelector('h1')
+      var all = document.querySelector('div')
+      var reload
+      var oneText = ''
+      var allText = ''
+      function displayText(text) {
+        oneText = text.toUpperCase()
+        one.textContent = document.title = oneText
+        reload = setTimeout(function() {
+          displayText(texts[Math.floor(Math.random() * texts.length)])
+        }, 100)
       }
-      
-    })();
+      displayText(texts[Math.floor(Math.random() * texts.length)])
+      for (var i = texts.length - 1; i >= 0; i--) {
+        allText += texts[i].toUpperCase() + ' <span class="spacer"></span> '
+      }
+      all.innerHTML = '<p>' + allText + '</p>'
+    }
+    
   </script>
