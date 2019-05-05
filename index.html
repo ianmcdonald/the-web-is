@@ -111,7 +111,7 @@
       xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
           var blocks = JSON.parse(this.responseText).contents
-          blocks.forEach(x => { texts.push(x.content) })
+          blocks.forEach(x => { texts.unshift(x.content) })
           if (start < end) {
             start++
             loadBlocks(start)
@@ -140,7 +140,7 @@
         }, 100)
       }
       displayText(texts[Math.floor(Math.random() * texts.length)])
-      for (var i = texts.length - 1; i >= 0; i--) {
+      for (var i = 0; i < texts.length; i++) {
         allText += texts[i].toUpperCase() + ' <span class="spacer"></span> '
       }
       all.innerHTML = '<p>' + allText + '</p>'
