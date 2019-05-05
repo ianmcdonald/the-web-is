@@ -4,10 +4,14 @@
   <meta name="description" content="Statements found on the Web that seem to explain what it is">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="style.css" rel="stylesheet">
-  <title>The Web is&hellip;</title>
+  <title>THE WEB IS&hellip;</title>
   <style>
     * {
       box-sizing: border-box;
+      vertical-align: middle;
+    }
+    html {
+      background-color: #fbff5f;
     }
     body {
       font-family: Helvetica, Arial, Roboto, sans-serif;
@@ -16,259 +20,125 @@
       line-height: 1.2;
       margin: 0;
       padding: 0;
-      color: white;
-      background-color: black;
+      color: black;
+      background-color: #fbff5f;
       max-width: 100%;
       overflow-x: hidden;
-      cursor: pointer;
-      -webkit-highlight: transparent;
-      -webkit-tap-highlight-color: transparent;
-      user-select: none;
+      letter-spacing: -0.025em;
+      padding-bottom: 100vh;
+      min-height: 100vh;
     }
     h1 {
+      position: fixed;
+      top: 0.5rem;
+      left: 0.25rem;
+      font-size: 10vw;
+      margin: 0;
+      padding: 0;
+      font-weight: normal;
+      letter-spacing: -0.06em;
+      line-height: 0.8;
+      vertical-align: text-top;
+      hyphens: auto;
+    }
+    main {
+      display: block;
+      margin: 0;
+      padding: 100vh 0;
       position: absolute;
       top: 0;
       left: 0;
-      font-size: 7vw;
-      margin: 0;
-      padding: 0.5em 0.25rem;
-      font-weight: normal;
-      letter-spacing: -0.05em;
-      line-height: 0.9;
-      text-shadow: 1px 1px 0 black;      
-      vertical-align: text-top;
-      mix-blend-mode: difference;      
+      width: 100%;
+      height: auto;
+      background-color: transparent;
     }
     div {
       margin: 0;
-      padding: 0.25em;
-      background: white;
-      color: black;
+      padding: 0;
+      background-color: white;
       text-shadow: none;
       text-align: justify;
+      hyphens: auto;
+      width: 100%;
+      height: auto;
+      z-index: 1;
+      min-height: 50vh;
     }
-    span {
-      color: white;
-    }
-    span:first-child {
-      color: black;
-      text-decoration: underline;
-    }
-    em {
-      font-weight: lighter;
+    p {
+      margin: 0;
+      padding: 0.25em;
+      font-weight: normal;
     }
     svg {
       display: block;
-      position: relative;
+      position: fixed;
+      bottom: 0;
+      right: 0;
       width: 100%;
       height: 100%;
       min-height: 15em;
       max-height: 100vh;
-      mix-blend-mode: difference;
-      z-index: -1;
-      fill: white;
+      fill: none;
       stroke: white;
     }
-    .pause svg {
-      fill: none;     
+    path {
+      stroke: white;
+      stroke-width: 1px;
+    }
+    .spacer {
+      background-color: #fbff5f;
+      width: 0.75em;
+      height: 0.75em;
+      display: inline-block;
+      border-radius: 50%;
+      vertical-align: baseline;
     }
   </style>
 </head>
 <body>
-  <h1>The Web is&hellip;</h1>
+  <h1>&hellip;</h1>
   <svg viewBox="0 0 300 225.9"><path d="M146.7,4.8c77.4,0,140.1,43.7,140.1,97.5c0,25.4-13.9,48.5-36.7,65.8c1.2,6.2,3.4,12.6,7.1,18.8 c14.4,24,49.4,43.8,49.4,43.8s-53.6-27.9-92.9-42.7c-19.9,7.6-42.7,11.8-67,11.8c-77.4,0-140.1-43.7-140.1-97.5S69.3,4.8,146.7,4.8"/></svg>
-  <div></div>
+  <main>
+    <div></div>
+  </main>
   <script>
     (function() {
-      var texts = [
-        'an infinite library',
-        'here',
-        'a dangerous place',
-        'what you make it',
-        'being weaponized',
-        'a colloquium',
-        'a trick',
-        'a spectrum',
-        'a coordinated effort to usher in complete communism',
-        'not just left-to-right',
-        'where the spider hunts',
-        'still a DARPA weapon',
-        'wide enough',
-        'a potion',
-        'more than just lives, more than death affects it',
-        'only what you give it',
-        'not the only web',
-        'a collection of documents',
-        'so big yet I use five sites max',
-        'like a country now',
-        'doing fine destroying itself',
-        'a liquid',
-        'a database that needs curating',
-        'on eternal shuffle mode',
-        'the long slow death of the middle man',
-        'a sort of shared external memory',
-        'behind glass',
-        'not a doctor',
-        'on me I repeat the web is on me',
-        'just a compression format',
-        'divided into two worlds',
-        'weirdly medieval',
-        'on fire and the Internet Archive is helping save it',
-        'made of millions of reality stars',
-        'chewing away at what we\'ve always understood typography to be',
-        'a vampire',
-        'okay',
-        'a wonderful place where art meets puzzles',
-        'a mindset',
-        'freaking out over this no-kill spider catcher',
-        'full of great educators',
-        'the room and it\'s becoming more social',
-        'the gift that keeps on giving',
-        'a worried mom',
-        'magic',
-        'getting misused',
-        'basically one giant targeted ad now',
-        'for everyone, so leave no one behind',
-        'for the spider',
-        'your database',
-        'in the shape of a heart',
-        'a ghetto',
-        'a platform',
-        'ruined and I ruined it',
-        'flat',
-        'here',
-        'made of strings',
-        'your lever',
-        'not made of content, it\'s a collection of human ideas',
-        'an emerging artist (age 29)',
-        'accessible by default; we\'re the ones who break it',
-        'like 70% faces now',
-        'more like water than it is like cable television',
-        'one big ass police station',
-        'the long slow death of the middle man',
-        'like an anthill built by ants on LSD',
-        'our collective consciousness nesting',
-        'just a bunch of machines held together with duct tape',
-        'an unhealthy place for someone hungry for attention',
-        'world wide, should we shut it down?',
-        'an error when I try to sign in',
-        'a shared common language of humanity',
-        'the reason I get up in the morning',
-        'now real life',
-        'too complex',
-        'the ultimate time thief',
-        'not a frontier',
-        'a technical and social problem',
-        'now full of billions of pages of useless, banal content',
-        'an illusion, instant entertainment, created defamation or unspoken pain',
-        '(even more) broken :(',
-        'failing',
-        'old enough for us judge what it’s produced',
-        'full of niche little things that pop in and out of existence',
-        'your best bet',
-        'getting suffocating now and she can\'t cut loose',
-        'becoming the web',
-        'a bizarre miracle of human cooperation',
-        'as old as I am',
-        'just all there is',
-        'like a dominatrix',
-        'so vast',
-        'eating the world',
-        'now one big cookie banner',
-        'filled with lies',
-        'being made to be sure she can\'t get out',
-        'now safer for people',
-        'an integral part of my job',
-        'better than the app',
-        'down at a major bank today',
-        'surfing you!',
-        'too obstacled',
-        'often an afterthought for many teams',
-        'filled with conflicting info',
-        'kinda what I meant when I said software',
-        'now on your phone',
-        'a powerful tool for exploring private topics',
-        'still possible',
-        'so tangled we\'re all getting lost in it',
-        'not meant for humans',
-        'still being controlled by a single government or a single company',
-        'clearly faulty or a rip off',
-        'the cat that shares that space with you',
-        'alive with the sound of music',
-        'is broken, so its founder is taking another stab at it',
-        'a common information space',
-        'constantly evolving and there will be continual learning',
-        'far too much of a disappointment',
-        'hackable',
-        'like the world, it takes all types to make it tick',
-        'usually such a quiet place',
-        'full of dark holes',
-        'something that is often neglected',
-        'just not as enjoyable as before',
-        'abuzz with plenty of circumstantial evidence',
-        'dying and capitalism is to blame',
-        'inherently visual',
-        'such a privacy breaker',
-        'much better than real life most of the time',
-        'a wonderful town',
-        'a moving target',
-        'a huge waste of time',
-        'all that matters',
-        'full of people talking about this',
-        'too intricate',
-        'actually really slow',
-        'full of bots and fake accounts this morning',
-        'capable of surviving shocks, able to recover and maintain a positive peace',
-        'not only for software engineers',
-        'like our brain, there are big ideas and small ideas',
-        'more than mouse and keyboard',
-        'revolutionizing your kitchen and laundry room',
-        'so much better than what they say it is',
-        'gaining another dimension',
-        'the answer',
-        'ready for your true potential',
-        'human',
-        'a good idea',
-        'just a distraction, a way to shop and argue',
-        'a total mess',
-        'about four feet (corner to corner)',
-        'the worst place for a control freak to work',
-        'supposed to work',
-        'a work of art',
-        'all about verifiable data and trust',
-        'private',
-        'discrete',
-        'an ecosystem',
+      var blocks
+      var texts = []
+      loadBlocks()
 
-      ]
-      var one = document.querySelector('h1')
-      var all = document.querySelector('div')
-      var reload
-      var oneText = ''
-      var allText = ''
-      function displayText(text) {
-        oneText = 'THE WEB IS ' + text.toUpperCase()
-        one.textContent = document.title = oneText
-        reload = setTimeout(function() {
-          displayText(texts[Math.floor(Math.random() * texts.length)])
-        }, 2000)
+      function loadBlocks() {
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+          if (this.readyState == 4 && this.status == 200) {
+            blocks = JSON.parse(this.responseText).contents
+            blocks.forEach(x => { texts.push(x.content) })
+            writeIt()
+          }
+        };
+        xhttp.open("GET", "http://api.are.na/v2/channels/the-web-is?per=1000", true);
+        xhttp.send();
       }
-      displayText(texts[Math.floor(Math.random() * texts.length)])
-      document.body.addEventListener('click', function() {
-        if (reload === 0) {
-          displayText(texts[Math.floor(Math.random() * texts.length)])
-          document.body.className = ''
-        } else {
-          clearTimeout(reload)
-          reload = 0
-          document.body.className = 'pause'
+      
+      function writeIt() {
+        var one = document.querySelector('h1')
+        var all = document.querySelector('div')
+        var reload
+        var oneText = ''
+        var allText = ''
+        function displayText(text) {
+          oneText = text.toUpperCase()
+          one.textContent = document.title = oneText
+          reload = setTimeout(function() {
+            displayText(texts[Math.floor(Math.random() * texts.length)])
+          }, 100)
         }
-      })
-      for (var i = texts.length - 1; i >= 0; i--) {
-        allText += '<span>THE WEB IS</span> '
-        allText += '<em>(' + (i + 1) + ')&nbsp;</em>'
-        allText += texts[i].toUpperCase() + ' '
+        displayText(texts[Math.floor(Math.random() * texts.length)])
+        for (var i = texts.length - 1; i >= 0; i--) {
+          allText += texts[i].toUpperCase() + ' <span class="spacer"></span> '
+        }
+        all.innerHTML = '<p>' + allText + '</p>'
       }
-      all.innerHTML = allText
+      
     })();
   </script>
