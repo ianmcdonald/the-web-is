@@ -10,7 +10,7 @@
       vertical-align: middle;
     }
     html {
-      background-color: white;
+      background-color: black;
     }
     body {
       font-family: Helvetica, Arial, Roboto, sans-serif;
@@ -19,8 +19,8 @@
       line-height: 1.2;
       margin: 0;
       padding: 0;
-      color: black;
-      background-color: white;
+      color: white;
+      background-color: black;
       max-width: 100%;
       overflow-x: hidden;
       letter-spacing: -0.025em;
@@ -40,6 +40,7 @@
       vertical-align: text-top;
       hyphens: auto;
       color: blue;
+      z-index: 2;
     }
     main {
       display: block;
@@ -50,7 +51,7 @@
       left: 0;
       width: 100%;
       height: auto;
-      background-color: transparent;
+      background-color: black;
     }
     div {
       margin: 0;
@@ -82,10 +83,11 @@
       min-height: 15em;
       max-height: 100vh;
       fill: none;
-      stroke: black;
+      stroke: white;
+      z-index: 1;
     }
     path {
-      stroke: black;
+      stroke: white;
       stroke-width: 1px;
     }
     .spacer {
